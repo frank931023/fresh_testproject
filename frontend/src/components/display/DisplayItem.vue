@@ -1,12 +1,8 @@
 <template>
   <div class="product-card">
-    <img :src="getImagePath()" :alt="product.name" class="product-image" />
     <h3 class="product-name">{{ name }}</h3>
     <p class="product-price">${{ price }}</p>
-    <div class="product-rating">
-      <!-- 显示评分，可以使用星级组件或其他方式展示 -->
-      Rating: {{ rating }}/5
-    </div>
+    <div class="product-rating">Rating: {{ rating }}/5</div>
     <div class="product-actions">
       <button @click="viewDetails" class="action-button">See Detail</button>
       <button @click="addToCart" class="action-button">Add to Cart</button>
@@ -43,7 +39,7 @@ export default {
 };
 </script>
   
-  <style scoped>
+<style scoped>
 .product-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -85,5 +81,26 @@ export default {
   border: none;
   border-radius: 4px;
 }
+/* 
+li {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+a {
+  color: #3d008d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  color: #8d007a;
+}
+
+p {
+  margin: 0.5rem 0 0 0;
+} */
 </style>
   

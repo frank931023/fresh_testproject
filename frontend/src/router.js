@@ -18,11 +18,9 @@ const router = createRouter({
     { path: "/kids", component: KidsDisplay },
     { path: "/women", component: WomenDisplay },
     { path: "/men", component: MenDisplay },
-    { path: "/auth", component: UserAuth },
+    { path: "/user", component: UserAuth },
     { path: "/cart", component: UserCart },
     { path: "/:notFound(.*)", component: NotFound },
-
-    // !!! http://localhost:8081/user 有問題 會跑出notfound的畫面 !!!
   ],
 });
 
