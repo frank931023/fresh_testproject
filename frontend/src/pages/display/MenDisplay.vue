@@ -1,0 +1,3 @@
+<template>
+    men display
+</template>
