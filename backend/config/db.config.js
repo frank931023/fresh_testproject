@@ -1,19 +1,14 @@
-const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../config.env") });
+// const path = require("path");
+// require("dotenv").config({ path: path.resolve(__dirname, "../config.env") });
 
 module.exports = {
   development: {
     HOST: "127.0.0.1",
     USER: "root",
-    PASSWORD: "YES",
+    PASSWORD: "X10739y31248",
     PORT: 3307,
-    DB: "testdb",
+    DB: "shoppingWebsite",
     dialect: "mysql",
-    // HOST: process.env.DB_HOST,
-    // USER: process.env.DB_USER,
-    // PASSWORD: process.env.DB_PASSWORD,
-    // DB: process.env.DB_DATABASE,
-    // dialect: process.env.DB_DIALECT,
     //   pool: {
     //     max: 5,
     //     min: 0,

@@ -2,13 +2,15 @@ const db = require("../models");
 const ROLES = db.ROLES;
 const User = db.user;
 
-checkDuplicateUsernameOrEmail = (req, res, next) => {
-  // Username
+exports.checkDuplicateUsernameOrEmail = (req, res, next) => {
+  // Checks if the provided username is already in use by querying the database.
   User.findOne({
     where: {
       username: req.body.username,
     },
   }).then((user) => {
+    // If the username is found,
+    // sends a 400 Bad Request response with a message indicating the username is in use.
     if (user) {
       res.status(400).send({
         message: "Failed! Username is already in use!",
@@ -22,6 +24,8 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
         email: req.body.email,
       },
     }).then((user) => {
+      // If the email is found,
+      // sends a 400 Bad Request response with a message indicating the email is in use.
       if (user) {
         res.status(400).send({
           message: "Failed! Email is already in use!",
@@ -34,7 +38,7 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
   });
 };
 
-checkRolesExisted = (req, res, next) => {
+exports.checkRolesExisted = (req, res, next) => {
   if (req.body.roles) {
     for (let i = 0; i < req.body.roles.length; i++) {
       if (!ROLES.includes(req.body.roles[i])) {
@@ -49,9 +53,9 @@ checkRolesExisted = (req, res, next) => {
   next();
 };
 
-const verifySignUp = {
-  checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
-  checkRolesExisted: checkRolesExisted,
-};
+// const verifySignUp = {
+//   checkDuplicateUsernameOrEmail,
+//   checkRolesExisted,
+// };
 
-module.exports = verifySignUp;
+// module.exports = verifySignUp;
