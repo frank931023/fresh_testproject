@@ -18,8 +18,12 @@ const router = createRouter({
     { path: "/kids", component: KidsDisplay },
     { path: "/women", component: WomenDisplay },
     { path: "/men", component: MenDisplay },
-    { path: "/user", component: UserAuth },
-    { path: "/cart", component: UserCart },
+    {
+      path: "/user/:id",
+      component: UserAuth,
+      props: true,
+      children: [{ path: "cart", component: UserCart }], 
+    },
     { path: "/:notFound(.*)", component: NotFound },
   ],
 });

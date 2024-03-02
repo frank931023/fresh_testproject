@@ -1,4 +1,6 @@
 import { createApp } from "vue";
+// import { FontAwesomeIcon } from "@fortawesome/fontawesome-free";
+// import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import router from "./router.js";
 import store from "./store/index.js";
@@ -13,6 +15,8 @@ const app = createApp(App);
 
 app.use(router);
 app.use(store);
+
+// fab.library.add(...[faFacebookF, faInstagram, faLine, faYoutube]);
 
 app.component("base-card", BaseCard);
 app.component("base-button", BaseButton);
