@@ -14,6 +14,7 @@ export default {
           birthday: "1990/01/01",
           email: "user1@gmail.com",
           wantedItems: ["p1", "p2", "p4"],
+          wantedItemsQuantity: [1, 2, 3],
         },
         {
           id: "u2",
@@ -22,6 +23,7 @@ export default {
           birthday: "1990/01/02",
           email: "user2@gmail.com",
           wantedItems: ["p2", "p5", "p6"],
+          wantedItemsQuantity: [2, 1, 1],
         },
         {
           id: "u3",
@@ -30,6 +32,7 @@ export default {
           birthday: "1990/01/03",
           email: "user3@gmail.com",
           wantedItems: ["p1", "p3", "p5"],
+          wantedItemsQuantity: [3, 2, 1],
         },
       ],
     };

@@ -22,8 +22,10 @@ const router = createRouter({
       path: "/user/:id",
       component: UserAuth,
       props: true,
-      children: [{ path: "cart", component: UserCart }], 
+      children: [{ path: "cart", component: UserCart }],
     },
+    // { path: "/user", component: UserAuth },
+    // { path: "/cart", component: UserCart },
     { path: "/:notFound(.*)", component: NotFound },
   ],
 });
