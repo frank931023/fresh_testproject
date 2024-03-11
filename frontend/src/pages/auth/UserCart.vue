@@ -34,22 +34,23 @@ export default {
     //   const products = this.$store.getters["products/products"];
     //   return products.filter((product) => product.categories.includes("men"));
     // },
-    getUserWantedItems() {
-      this.$store
-        .dispatch("users/getUserWantedItems", this.id)
-        .then((res) => {
-          this.cartItems = res.data;
-          console.log(this.cartItems);
-        });
-    },
-    getUserWantedItemsQuantity() {
-      this.$store
-        .dispatch("users/getUserWantedItemsQuantity", this.id)
-        .then((res) => {
-          this.cartItemsQuantity = res.data;
-          console.log(this.cartItemsQuantity);
-        });
-    },
+    
+    // getUserWantedItems() {
+    //   this.$store
+    //     .dispatch("users/getUserWantedItems", this.id)
+    //     .then((res) => {
+    //       this.cartItems = res.data;
+    //       console.log(this.cartItems);
+    //     });
+    // },
+    // getUserWantedItemsQuantity() {
+    //   this.$store
+    //     .dispatch("users/getUserWantedItemsQuantity", this.id)
+    //     .then((res) => {
+    //       this.cartItemsQuantity = res.data;
+    //       console.log(this.cartItemsQuantity);
+    //     });
+    // },
   },
 };
 </script>
